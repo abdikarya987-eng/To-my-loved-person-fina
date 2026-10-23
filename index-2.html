@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090914">
+<meta name="description" content="Sebuah halaman kecil yang dibuat khusus untuk Nana.">
+<title>Untuk Nana ♡</title>
+<style>
+:root{--bg:#090914;--panel:#131326;--pink:#ff8fc8;--lav:#bba7ff;--text:#f7f2ff;--muted:#b8b0cc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100svh;color:var(--text);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;background:radial-gradient(ellipse at 50% 0%,#292044 0%,#101020 42%,var(--bg) 78%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(1px 1px at 15% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 78% 28%,#d9caff 99%,transparent),radial-gradient(1px 1px at 35% 73%,#fff 99%,transparent),radial-gradient(2px 2px at 88% 82%,#ffc8e9 99%,transparent),radial-gradient(1px 1px at 55% 45%,#fff 99%,transparent);background-size:260px 260px}
+.wrap{width:min(100% - 28px,560px);margin:auto;padding:28px 0 50px;position:relative}
+.topline{text-align:center;color:var(--muted);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;margin:8px 0 24px}
+.card{border:1px solid #ffffff18;background:linear-gradient(155deg,#ffffff0d,#ffffff04);box-shadow:0 24px 80px #0006,inset 0 1px #ffffff0d;border-radius:28px;padding:28px 22px;text-align:center;backdrop-filter:blur(12px)}
+.eyebrow{font-size:.78rem;color:var(--pink);letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,12vw,4.5rem);line-height:1.02;margin:12px 0 12px;letter-spacing:-.06em}
+.gradient{background:linear-gradient(100deg,#fff 5%,#ffc3e5 48%,#c7b7ff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);line-height:1.7;font-size:1rem;max-width:380px;margin:0 auto}
+.mascot{font-size:4.1rem;display:inline-grid;place-items:center;width:112px;height:112px;margin:22px auto 18px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff2fa,#f8a8d91c 58%,#b9a4ff12);border:1px solid #ffc5e733;box-shadow:0 0 50px #d879bb1c;animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+button{font:inherit;cursor:pointer;border:0;touch-action:manipulation}
+.primary{display:block;width:100%;padding:15px 18px;border-radius:16px;background:linear-gradient(100deg,#ff91c8,#b5a3ff);color:#171020;font-weight:800;box-shadow:0 10px 28px #e18bc72b;transition:transform .2s,filter .2s}
+.primary:active,.secondary:active{transform:scale(.98)}
+.secondary{padding:12px 15px;border-radius:14px;background:#ffffff0a;border:1px solid #ffffff1b;color:var(--text);font-weight:650}
+.controls{display:flex;gap:10px;margin-top:12px}
+.controls button{flex:1}
+.section{margin-top:16px}
+.hidden{display:none!important}
+.message{min-height:210px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.message .count{font-size:.72rem;color:var(--pink);letter-spacing:.16em;text-transform:uppercase}
+.message h2{font-size:clamp(1.6rem,7vw,2.35rem);margin:0;letter-spacing:-.04em}
+.message p{color:#d5cde4;line-height:1.8;margin:0;font-size:1rem}
+.dots{display:flex;justify-content:center;gap:7px;margin:20px 0}
+.dot{width:6px;height:6px;border-radius:9px;background:#ffffff30;transition:all .2s}
+.dot.active{width:22px;background:var(--pink)}
+.note{font-size:.78rem;color:#8f87a7;line-height:1.6;margin:20px auto 0}
+.signature{font-family:Georgia,serif;font-style:italic;color:#ffc1e3;font-size:1.15rem}
+.heart{position:fixed;z-index:5;bottom:-30px;pointer-events:none;animation:rise linear forwards;filter:drop-shadow(0 0 8px #ff8fc866)}
+@keyframes rise{to{transform:translateY(-115vh) translateX(var(--drift)) rotate(25deg);opacity:0}}
+footer{text-align:center;color:#827a9b;font-size:.75rem;margin-top:24px}
+.music-indicator{display:inline-flex;align-items:center;gap:7px;color:#c7bddc;font-size:.8rem}
+.bars{display:inline-flex;align-items:center;gap:2px;height:13px}
+.bars i{width:2px;background:var(--pink);height:5px;border-radius:3px}
+.bars.playing i{animation:bar .7s ease-in-out infinite alternate}
+.bars i:nth-child(2){animation-delay:.2s}.bars i:nth-child(3){animation-delay:.4s}.bars i:nth-child(4){animation-delay:.1s}
+@keyframes bar{to{height:13px}}
+@media(min-width:520px){.wrap{padding-top:42px}.card{padding:36px 34px}.mascot{margin-top:28px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topline">a little corner of the universe · for Nana</div>
+  <section class="card" id="intro">
+    <div class="eyebrow">dibuat dengan hati ♡</div>
+    <div class="mascot" aria-hidden="true">🐰</div>
+    <h1><span class="gradient">Hai, Nana.</span></h1>
+    <p class="subtitle">Aku punya beberapa kalimat kecil yang pengin aku sampaikan ke kamu. Nggak harus buru-buru, bacanya pelan-pelan aja ya.</p>
+    <div style="height:24px"></div>
+    <button class="primary" id="startBtn">Buka pesan kecilku <span aria-hidden="true">♡</span></button>
+    <div class="controls">
+      <button class="secondary" id="musicBtn" aria-pressed="false">♫ Nyalakan musik</button>
+      <button class="secondary" id="surpriseBtn">Kejutan kecil ✦</button>
+    </div>
+    <p class="note">Pakai earphone kalau mau. Musiknya berupa melodi lembut yang dibuat langsung di halaman ini.</p>
+  </section>
+
+  <section class="card section hidden" id="story" aria-live="polite">
+    <div class="message">
+      <div class="count" id="count">pesan 01 / 05</div>
+      <h2 class="gradient" id="heading">Aku senang kenal kamu.</h2>
+      <p id="bodyText">Ada hal sederhana yang jadi terasa lebih menyenangkan sejak kita sering ngobrol.</p>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <button class="primary" id="nextBtn">Lanjut, Nana →</button>
+    <div class="controls">
+      <button class="secondary" id="backBtn">← Sebelumnya</button>
+      <button class="secondary" id="heartBtn">Kirim hati ♡</button>
+    </div>
+  </section>
+
+  <section class="card section hidden" id="ending">
+    <div class="mascot" aria-hidden="true">💗</div>
+    <div class="eyebrow">satu hal terakhir</div>
+    <h2 style="font-size:clamp(2rem,9vw,3.2rem);margin:12px 0" class="gradient">Terima kasih, Nana.</h2>
+    <p class="subtitle">Aku nggak berharap kamu harus jadi siapa-siapa demi aku. Aku cuma berharap kita bisa saling mendukung, tetap tumbuh, dan sama-sama mengejar mimpi kita.</p>
+    <div style="height:20px"></div>
+    <p class="signature">— dari seseorang yang sayang sama kamu ♡</p>
+    <div style="height:22px"></div>
+    <button class="primary" id="againBtn">Baca lagi dari awal ↺</button>
+    <button class="secondary" style="width:100%;margin-top:10px" id="finalHeartBtn">Sebarkan hati ✦</button>
+  </section>
+  <footer><span class="music-indicator"><span class="bars" id="bars"><i></i><i></i><i></i><i></i></span> dibuat khusus untuk Nana</span><br><br>nggak harus sempurna, yang penting tulus ♡</footer>
+</main>
+<script>
+const messages = [
+  ["Aku senang kenal kamu.", "Ada hal sederhana yang jadi terasa lebih menyenangkan sejak kita sering ngobrol. Kadang obrolan biasa pun bisa jadi bagian yang paling aku tunggu."],
+  ["Kamu nggak harus selalu kuat.", "Kalau suatu hari kamu capek, sedih, atau lagi bingung, kamu nggak perlu pura-pura baik-baik aja. Semoga aku bisa jadi tempat yang nyaman buat cerita."],
+  ["Aku dukung mimpi kamu.", "Aku pengin kita tetap punya ruang buat belajar, tumbuh, dan mengejar hal-hal yang kita impikan. Sayang itu bukan saling menahan, tapi saling menguatkan."],
+  ["Pelan-pelan, ya.", "Kita nggak perlu buru-buru jadi pasangan yang sempurna. Kita bisa belajar memahami satu sama lain, ngomong baik-baik, dan memperbaiki kalau ada yang keliru."],
+  ["Kamu berarti buat aku.", "Aku senang kamu hadir di hidupku, Nana. Semoga hubungan ini membawa lebih banyak ketenangan, tawa, keberanian, dan hal baik buat kita berdua."]
+];
+let index=0;
+const intro=document.getElementById('intro'),story=document.getElementById('story'),ending=document.getElementById('ending');
+const heading=document.getElementById('heading'),bodyText=document.getElementById('bodyText'),count=document.getElementById('count'),dots=document.getElementById('dots');
+function render(){
+  heading.textContent=messages[index][0]; bodyText.textContent=messages[index][1];
+  count.textContent=`pesan ${String(index+1).padStart(2,'0')} / ${String(messages.length).padStart(2,'0')}`;
+  dots.innerHTML=messages.map((_,i)=>`<span class="dot ${i===index?'active':''}"></span>`).join('');
+  document.getElementById('nextBtn').textContent=index===messages.length-1?'Pesan terakhir ♡':'Lanjut, Nana →';
+}
+function showHearts(amount=12){
+  const chars=['♡','♥','✦','💕'];
+  for(let i=0;i<amount;i++){
+    const el=document.createElement('span');el.className='heart';el.textContent=chars[Math.floor(Math.random()*chars.length)];
+    el.style.left=(Math.random()*92+4)+'vw';el.style.fontSize=(14+Math.random()*22)+'px';
+    el.style.animationDuration=(3+Math.random()*3)+'s';el.style.setProperty('--drift',((Math.random()-.5)*130)+'px');
+    el.style.color=['#ff8fc8','#c5b3ff','#ffd4eb'][Math.floor(Math.random()*3)];
+    document.body.appendChild(el);setTimeout(()=>el.remove(),6500);
+  }
+}
+document.getElementById('startBtn').addEventListener('click',()=>{intro.classList.add('hidden');story.classList.remove('hidden');render();showHearts(8);story.scrollIntoView({behavior:'smooth',block:'center'});});
+document.getElementById('nextBtn').addEventListener('click',()=>{if(index<messages.length-1){index++;render();showHearts(4)}else{story.classList.add('hidden');ending.classList.remove('hidden');showHearts(20);ending.scrollIntoView({behavior:'smooth',block:'center'});}});
+document.getElementById('backBtn').addEventListener('click',()=>{if(index>0){index--;render()}else{story.classList.add('hidden');intro.classList.remove('hidden');}});
+document.getElementById('heartBtn').addEventListener('click',()=>showHearts(18));
+document.getElementById('surpriseBtn').addEventListener('click',()=>{showHearts(24);document.getElementById('surpriseBtn').textContent='Khusus buat kamu ♡';});
+document.getElementById('againBtn').addEventListener('click',()=>{index=0;ending.classList.add('hidden');intro.classList.remove('hidden');showHearts(8);window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('finalHeartBtn').addEventListener('click',()=>showHearts(30));
+
+// Gentle synthesized ambient music; starts only after a user taps the music button.
+let audioCtx=null, master=null, musicOn=false, timer=null, noteStep=0;
+const notes=[261.63,329.63,392.00,329.63,293.66,349.23,440.00,349.23];
+function playNote(){
+ if(!musicOn||!audioCtx)return;
+ const t=audioCtx.currentTime, freq=notes[noteStep%notes.length];noteStep++;
+ const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+ osc.type='sine';osc.frequency.setValueAtTime(freq,t);
+ gain.gain.setValueAtTime(0.0001,t);gain.gain.exponentialRampToValueAtTime(0.045,t+.08);gain.gain.exponentialRampToValueAtTime(0.0001,t+1.2);
+ osc.connect(gain);gain.connect(master);osc.start(t);osc.stop(t+1.25);
+ if(noteStep%4===0){const bass=audioCtx.createOscillator(),bg=audioCtx.createGain();bass.type='triangle';bass.frequency.value=freq/2;bg.gain.setValueAtTime(.0001,t);bg.gain.exponentialRampToValueAtTime(.018,t+.12);bg.gain.exponentialRampToValueAtTime(.0001,t+1.5);bass.connect(bg);bg.connect(master);bass.start(t);bass.stop(t+1.55);}
+}
+async function toggleMusic(){
+ const btn=document.getElementById('musicBtn');
+ if(!musicOn){
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC){btn.textContent='Musik tidak didukung';return;}
+  audioCtx=audioCtx||new AC();await audioCtx.resume();master=master||audioCtx.createGain();master.gain.value=.65;master.connect(audioCtx.destination);
+  musicOn=true;playNote();timer=setInterval(playNote,650);btn.textContent='Ⅱ Matikan musik';btn.setAttribute('aria-pressed','true');document.getElementById('bars').classList.add('playing');
+ }else{
+  musicOn=false;clearInterval(timer);btn.textContent='♫ Nyalakan musik';btn.setAttribute('aria-pressed','false');document.getElementById('bars').classList.remove('playing');
+  if(master&&audioCtx){master.gain.setTargetAtTime(.0001,audioCtx.currentTime,.08);}
+ }
+}
+document.getElementById('musicBtn').addEventListener('click',toggleMusic);
+</script>
+</body>
+</html>
